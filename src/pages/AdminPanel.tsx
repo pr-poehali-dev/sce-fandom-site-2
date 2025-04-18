@@ -96,8 +96,7 @@ const AdminPanel = () => {
             <CardTitle>Управление материалами</CardTitle>
             <CardDescription>Создание, редактирование и удаление материалов</CardDescription>
           </CardHeader>
-          <Car
-dContent className="flex flex-col sm:flex-row gap-4">
+          <CardContent className="flex flex-col sm:flex-row gap-4">
             <Button asChild className="w-full sm:w-auto">
               <Link to="/admin/posts/new">Создать новый материал</Link>
             </Button>
