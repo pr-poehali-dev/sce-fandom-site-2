@@ -19,6 +19,7 @@ const Footer = () => {
             <ul className="space-y-2 text-sm text-gray-300">
               <li><Link to="/" className="hover:text-white transition-colors">Главная</Link></li>
               <li><Link to="/objects" className="hover:text-white transition-colors">Объекты</Link></li>
+              <li><Link to="/posts" className="hover:text-white transition-colors">Публикации</Link></li>
               <li><Link to="/about" className="hover:text-white transition-colors">О нас</Link></li>
             </ul>
           </div>

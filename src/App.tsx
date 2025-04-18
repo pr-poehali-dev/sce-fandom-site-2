@@ -12,6 +12,7 @@ import SCEObjectsPage from '@/pages/SCEObjectsPage';
 import SCEObjectDetailPage from '@/pages/SCEObjectDetailPage';
 import AdminSCEObjectForm from '@/pages/AdminSCEObjectForm';
 import PrivacyPage from '@/pages/PrivacyPage';
+import PostsPage from '@/pages/PostsPage';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <Route path="/objects" element={<SCEObjectsPage />} />
         <Route path="/objects/:id" element={<SCEObjectDetailPage />} />
         <Route path="/privacy" element={<PrivacyPage />} />
+        <Route path="/posts" element={<PostsPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Toaster />
