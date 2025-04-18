@@ -1,116 +1,107 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+ 
 @layer base {
   :root {
-    --background: 0 0% 92%;
-    --foreground: 0 0% 10%;
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
 
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 10%;
-
+    --card-foreground: 222.2 84% 4.9%;
+ 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 10%;
-
-    --primary: 0 80% 45%;
-    --primary-foreground: 0 0% 100%;
-
-    --secondary: 0 0% 16%;
-    --secondary-foreground: 0 0% 100%;
-
-    --muted: 0 0% 85%;
-    --muted-foreground: 0 0% 40%;
-
-    --accent: 0 80% 45%;
-    --accent-foreground: 0 0% 100%;
-
+    --popover-foreground: 222.2 84% 4.9%;
+ 
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+ 
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+ 
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+ 
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+ 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive-foreground: 210 40% 98%;
 
-    --border: 0 0% 75%;
-    --input: 0 0% 75%;
-    --ring: 0 80% 45%;
-
-    --radius: 0.25rem;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+ 
+    --radius: 0.5rem;
+    
+    /* SCE Foundation цвета */
+    --sce-background: 0 0% 98%;
+    --sce-foreground: 220 20% 10%;
+    --sce-primary: 0 70% 40%;
+    --sce-secondary: 215 30% 20%;
+    --sce-accent: 200 70% 50%;
   }
-
+ 
   .dark {
-    --background: 0 0% 15%;
-    --foreground: 0 0% 90%;
-
-    --card: 0 0% 20%;
-    --card-foreground: 0 0% 90%;
-
-    --popover: 0 0% 20%;
-    --popover-foreground: 0 0% 90%;
-
-    --primary: 0 80% 50%;
-    --primary-foreground: 0 0% 98%;
-
-    --secondary: 0 0% 25%;
-    --secondary-foreground: 0 0% 98%;
-
-    --muted: 0 0% 25%;
-    --muted-foreground: 0 0% 60%;
-
-    --accent: 0 80% 50%;
-    --accent-foreground: 0 0% 98%;
-
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+ 
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+ 
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+ 
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+ 
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+ 
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+ 
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+ 
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-
-    --border: 0 0% 30%;
-    --input: 0 0% 30%;
-    --ring: 0 80% 50%;
+    --destructive-foreground: 210 40% 98%;
+ 
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    
+    /* SCE Foundation темные цвета */
+    --sce-background: 215 30% 10%;
+    --sce-foreground: 0 0% 90%;
+    --sce-primary: 0 70% 45%;
+    --sce-secondary: 220 20% 15%;
+    --sce-accent: 200 70% 40%;
   }
 }
-
+ 
 @layer base {
   * {
     @apply border-border;
   }
-
   body {
-    @apply bg-sce-background text-sce-text font-serif;
+    @apply bg-background text-foreground;
   }
-  
-  .sce-container {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 0 1rem;
-  }
-  
-  .sce-header {
-    background-color: #900000;
-    color: white;
-    padding: 1rem;
-    text-align: center;
-  }
-  
-  .sce-logo {
-    font-size: 2.5rem;
-    font-weight: bold;
-    letter-spacing: 0.2rem;
-  }
-  
-  .sce-nav {
-    background-color: #2a2a2a;
-    color: white;
-  }
-  
-  .sce-nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.5rem 1rem;
-  }
-  
-  .sce-footer {
-    background-color: #2a2a2a;
-    color: white;
-    padding: 1rem;
-    text-align: center;
-    margin-top: 2rem;
-  }
+}
+
+/* Специфические стили для SCE Foundation */
+.sce-container {
+  @apply bg-sce-background text-sce-foreground;
+}
+
+.sce-header {
+  @apply bg-sce-secondary text-white;
+}
+
+.sce-accent {
+  @apply text-sce-accent;
+}
+
+.sce-primary {
+  @apply text-sce-primary;
 }
